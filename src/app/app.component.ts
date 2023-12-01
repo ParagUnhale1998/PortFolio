@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Portfolio-New';
+  hamburgerIsTrue :boolean = false
+ 
+  currentSection: 'personal' | 'qualifications' | 'skills' = 'personal';
+
+  showSection(section: 'personal' | 'qualifications' | 'skills') {
+    this.currentSection = section;
+  }
 }
