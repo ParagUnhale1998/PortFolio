@@ -2,6 +2,8 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 :host {
     display: block;
     padding: 1rem;
@@ -15,10 +17,31 @@
     // background-size: 800px;
     // background-position: 90% -25%;
   }
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+    border: 3px solid #f5f5f5;
+  }
+
   #cta{
-    // background-image: url(assets/bg-simplify-section-desktop.svg);
+    background-image: url(assets/bg-simplify-section-desktop.svg);
     background-repeat: no-repeat;
   }
+  @media (max-width:600px) {
+    #cta{
+        background-image: url(assets/bg-simplify-section-mobile.svg);
+        background-repeat: no-repeat;
+    }
+  }
+
   .hamburger{
     padding: 0%;
     position: absolute;
@@ -50,3 +73,42 @@
     font-weight: 700;
   }
 
+
+  
+  .badge {
+    @apply text-white bg-darkGrayishBlue px-3 py-2 rounded-full mr-2   ;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.487);
+  }
+  .scale {
+    @apply transition-transform transform hover:scale-110; 
+  }
+
+.project-transition {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .project-loaded {
+    opacity: 1;
+  }
+  
+  // header {
+  //   /* Your Navbar Styles */
+  //   position: relative;
+  //   transition: top 0.9s ease-in-out;
+  //   scroll-behavior: smooth;
+    
+  // }
+  
+  // header.sticky {
+  //   scroll-behavior: smooth;
+  //   z-index: 1000;
+  //   position: fixed;
+  //   top: 0;
+  //   width: 100%;
+  //   // background: #fff;
+  //   // background-image: url(assets/hero/shape-2-light.svg);
+  //   // background-repeat: no-repeat;
+  //   padding: 0;
+  //   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.558);
+  // }
